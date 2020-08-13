@@ -7,13 +7,13 @@ categories: infosec analysis
 
 ## Why this post
 
-There are a plethora of specialities within InfoSec, many of which have a number of learning resources dedicated to them. However, one aspect that I believe is fundamental to many of them, yet rarely receives any amount of dedicated conversation, is analysis. There are entire career paths within InfoSec that, by their very name, imply that analysis is the fundamental activity (SOC analyst, threat intel analyst, etc). However, there is almost no shared lexical understanding of what analysis actually is. If someone is an 'analyst', but cannot define what 'analysis' actually is, how can they expect to get better and grow in it? Analysis is an actual skill that can be learned, practiced, and honed, however, that requires us to define what that looks like.
+There are a plethora of specialities within InfoSec, many of which have a number of learning resources dedicated to them. However, one aspect that I believe is fundamental to many of them, yet rarely receives any amount of attention, is analysis. There are entire career paths within InfoSec that, by their very name, imply that analysis is the fundamental activity (SOC analyst, threat intel analyst, etc). However, there is almost no shared understanding of what analysis actually is. If someone is an 'analyst', but cannot define what 'analysis' actually is, how can they expect to get better and develop their skills in this undefined activity? Analysis is an actual skill that can be learned, practiced, and honed, however, that requires us to define what that looks like.
 
 ## Caveats
 
 I am not even close to the first person (nor the last) to ponder and write on the essence of analysis. There have been numerous before me to explore and document their findings on this process. One of the most notable that comes to mind is [The Psychology of Intelligence Analysis](https://www.cia.gov/library/center-for-the-study-of-intelligence/csi-publications/books-and-monographs/psychology-of-intelligence-analysis/PsychofIntelNew.pdf). While that explores analysis through the lens of government intelligence analysts whose drive it is to inform policy makers, it covers many cognitive biases that impacts how we do analysis in other fields.
 
-This is not a comprehensive view of analysis and how it can apply to our functions in the InfoSec world, but my goal is to provide an initial introduction to the subject. How can people beginning in the field better identify a path to grow their skills? How can someone established in the field better evaluate the accuracy of their own work? These are a couple of the topics this introduction seeks to touch on.
+This post is not a comprehensive view of analysis and how it can apply to our functions in the InfoSec world, but my goal is to provide an initial introduction to the subject. How can people beginning in the field better identify a path to grow their skills? How can someone established in the field better evaluate the accuracy of their own work? These are a couple of the topics this introduction seeks to touch on.
 
 ## Definition of Analysis
 
@@ -26,7 +26,7 @@ In order to have a meaningful discussion of how to get better at analysis, we ne
     * Our level of expertise in the data we are observing
     * Our ability to synthesize inferences from multiple data points together
     * Our ability to understand logical chains that lead to our data point
-    * Our imagination to account for unintended results (or just be prepared to be wrong)
+    * Our imagination to account for unintended results (or "be prepared to be wrong")
 
 ## Data Expertise
 
@@ -51,7 +51,7 @@ How would you interpret this situation? Different people will evaluate this scen
     * This man is your neighbor that you have known for years and have a positive relationship with.
     * You let him borrow a kitchen knife last week, which he said he would return. That is the knife he is holding.
 
-Adding these data points can completely change the context of the scenario and how we interpret what is going on. This is where it is important, not only to understand the data points, but seek to get a composite view of multiple data points to better provide context for your initial data point of interest.
+Adding these data points can completely change the context of the scenario and how we interpret what is going on. This is where it is important to get a composite view of multiple data points to provide clearer context for your initial data point of interest.
 
 ## Understanding Logical Chains of Data Points
 
@@ -63,10 +63,16 @@ You observe a computer on your network making a network connection to 'downloadi
 
 There are multiple other data points you can infer from this:
 
-    1. Computers don't make network connections because they just feel like it. There must be a process on that computer that initiated that network connection.
-    2. That process was not started in a vaccuum, it was started by something...potentially this was started automatically by other software, or perhaps it was started manually by a human.
-    3. There is a fair chance that there is a binary file (like a MZ executable on a Windows system) on the computer assocated with the process that made this network connection.
-    4. The computer had to be able to resolve the domain 'downloadingmalware.com'. Are you logging DNS, and did it make a DNS lookup for that domain? If there is evidence that a DNS lookup did **not** happen, that could imply the domain could have been added to the computers hosts file. Is there evidence of that? If so, there may be _another_ process that made that change.
+    1. Computers don't make network connections because they just feel like it. There must be a process
+    on that computer that initiated that network connection.
+    2. That process was not started in a vaccuum, it was started by something...potentially this was started
+    automatically by other software, or perhaps it was started manually by a human.
+    3. There is a fair chance that there is a binary file (like a MZ executable on a Windows system) on
+    the computer assocated with the process that made this network connection.
+    4. The computer had to be able to resolve the domain 'downloadingmalware.com'. Are you logging DNS, and
+    did it make a DNS lookup for that domain? If there is evidence that a DNS lookup did **not** happen, that
+    could imply the domain could have been added to the computers hosts file. Is there evidence of that?
+    If so, there may be _another_ process that made that change.
     5. (assuredly more here)
 
 Looking at that, you can take a single data point and identify a number of other data points that would be related that would have had to happen to get to the data point that you initially observed. You can then start to build a trail of other data points to begin investigating to create a more complete picture of what happened.
