@@ -47,13 +47,15 @@ Given this example, it becomes more obvious how our ability to infer data grows 
 
 Our ability to build a complete picture of reality rarely hinges on a single data point. However, when analyzing technical data, sometimes we fall into the trap of drawing conclusions off a single data point (a single network connection, a single process execution, etc.) without looking at what else was going on at the time of the event that can change the context.  Imagine the below scenario:
 
-    * There is a man knocking at your front door, and he is holding a knife in his hand.
+>    * There is a man knocking at your front door, and he is holding a knife in his hand.
 
 How would you interpret this situation? Different people will evaluate this scenario differently; some may feel innately threatened, while others may not. However, what if we add the following data points:
 
-    * There is a man knocking at your front door, and he is holding a knife in his hand.
-    * This man is your neighbor that you have known for years and have a positive relationship with.
-    * You let him borrow a kitchen knife last week, which he said he would return. That is the knife he is holding.
+>
+>    * There is a man knocking at your front door, and he is holding a knife in his hand.
+>    * This man is your neighbor that you have known for years and have a positive relationship with.
+>    * You let him borrow a kitchen knife last week, which he said he would return. That is the knife he is holding.
+>
 
 Adding these data points can completely change the context of the scenario and how we interpret what is going on. This is where it is important to get a composite view of multiple data points to provide clearer context for your initial data point of interest.
 
@@ -67,17 +69,19 @@ You observe a computer on your network making a network connection to 'downloadi
 
 There are multiple other data points you can infer from this:
 
-    1. Computers don't make network connections because they just feel like it. There must be a process
-    on that computer that initiated that network connection.
-    2. That process was not started in a vaccuum, it was started by something...potentially this was started
-    automatically by other software, or perhaps it was started manually by a human.
-    3. There is a fair chance that there is a binary file (like a MZ executable on a Windows system) on
-    the computer assocated with the process that made this network connection.
-    4. The computer had to be able to resolve the domain 'downloadingmalware.com'. Are you logging DNS, and
-    did it make a DNS lookup for that domain? If there is evidence that a DNS lookup did **not** happen, that
-    could imply the domain could have been added to the computers hosts file. Is there evidence of that?
-    If so, there may be _another_ process that made that change.
-    5. (assuredly more here)
+>
+>    1. Computers don't make network connections because they just feel like it. There must be a process
+>    on that computer that initiated that network connection.
+>    2. That process was not started in a vaccuum, it was started by something...potentially this was started
+>    automatically by other software, or perhaps it was started manually by a human.
+>    3. There is a fair chance that there is a binary file (like a MZ executable on a Windows system) on
+>    the computer assocated with the process that made this network connection.
+>    4. The computer had to be able to resolve the domain 'downloadingmalware.com'. Are you logging DNS, and
+>    did it make a DNS lookup for that domain? If there is evidence that a DNS lookup did **not** happen, that
+>    could imply the domain could have been added to the computers hosts file. Is there evidence of that?
+>    If so, there may be _another_ process that made that change.
+>    5. (assuredly more here)
+>
 
 Looking at that, you can take a single data point and identify a number of other data points that would be related that would have had to happen to get to the data point that you initially observed. You can then start to build a trail of other data points to begin investigating to create a more complete picture of what happened.
 
@@ -91,15 +95,17 @@ Date flow start          Proto   Src IP Addr:Port      Dst IP Addr:Port        P
 There are multiple ways people could interpret that data. Some reactions could be, _"that is just a single packet and not a whole session, so it doesn't tell us much"_, or _"That is SSH because of port 22, so it is encrypted so we don't have any idea what's going on"_
 . But you could also infer some of the following data:
 
-    1. That is TCP port 22, which implies it is SSH, but it is going in the server -> client direction. Given this, we can immediately imply that SSH (or a process listening on port 22) is actually running on the server.
-    2. Given what we discussed above, the server SSH process will not randomly reach out to the client, so we are probably seeing a reflection of the server responding to traffic initiated by the client.
-    3. Looking at the size of the packet, we can imply that the client has successfully SSH'd to the server.
-    * Thinking about how SSH works, a client will attempt to connect either via pki or intending to use a username and password.
-    * After the 3-way TCP handshake, the server will traditionally display it's banner and negotiate the authentication, requesting a username and password.
-    * If the client fails 3 password attempts, the connection will be killed and they'll have to start over.
-    * Thinking about that, in the circumstance where the client does *not* know how to correctly authenticate to the server, the amount of data transferred from the server back to the client is very small (the only real variability in it is the size of the banner).
-    * Given that the size of the packet is 61,488 bytes, that can reasonably be assumed to be larger than any banner that a SSH server would return. This implies that the client has completed the authentication to the server, and ran a command that elicited the server to return that many bytes of data.
-    4. The server IP address belongs to AS2875, which is the Joint Institute for Nuclear Research in Russia, and the client IP address belongs to AS207529 (Adnan Rafique) which is in Pakistan.
+>
+>    1. That is TCP port 22, which implies it is SSH, but it is going in the server -> client direction. Given this, we can immediately imply that SSH (or a process listening on port 22) is actually running on the server.
+>    2. Given what we discussed above, the server SSH process will not randomly reach out to the client, so we are probably seeing a reflection of the server responding to traffic initiated by the client.
+>    3. Looking at the size of the packet, we can imply that the client has successfully SSH'd to the server.
+>    * Thinking about how SSH works, a client will attempt to connect either via pki or intending to use a username and password.
+>    * After the 3-way TCP handshake, the server will traditionally display it's banner and negotiate the authentication, requesting a username and password.
+>    * If the client fails 3 password attempts, the connection will be killed and they'll have to start over.
+>    * Thinking about that, in the circumstance where the client does *not* know how to correctly authenticate to the server, the amount of data transferred from the server back to the client is very small (the only real variability in it is the size of the banner).
+>    * Given that the size of the packet is 61,488 bytes, that can reasonably be assumed to be larger than any banner that a SSH server would return. This implies that the client has completed the authentication to the server, and ran a command that elicited the server to return that many bytes of data.
+>    4. The server IP address belongs to AS2875, which is the Joint Institute for Nuclear Research in Russia, and the client IP address belongs to AS207529 (Adnan Rafique) which is in Pakistan.
+>
 
 Given an understanding of the protocol at play in the above data point, you can go from a perception of, "this is just a packet", to "an entity in Pakistan appears to have successful SSH access to a server in Russia's Joint Institute for Nuclear Research", which is a far more comprehensive view of the situation, all based off of the implications of what would be required for a single data point to exist.
 
@@ -107,11 +113,11 @@ Given an understanding of the protocol at play in the above data point, you can 
 
 Sometimes technology doesn't work the way we think it should.  For example, one time I was looking at building detections based on [Windows logon types](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4624) and RDP.  I figured there were some kinds of accounts we'd expect to see for interactive logons (hands on keyboard, type 2), some network logons (type 3), and some remoteinteractive (rdp, type 10).  To my surprise, when I was doing testing, I realized that the way RDP was implemented at the time, a single RDP session created a type 2, type 3, *and* type 10 logon event. This took me by surprise and I had to completely alter the way that I intended to start building detections and alerts.
 
-This is where our internal biases and the very expertise that I espouse we develop in ourselves in the first point, can get in our own way. The very expertise we develop within ourselves may give us a false sense of confidence in our initial interpretation of data. I have had a number of conversations with analysts where they observed a data point which did not fully conform to their expectation of how a protocol/process _should_ work. Sometimes they got so far deep in the rabbit hole trying to defend the their expectations of how things should work, that they lose sight of what the data points are actually telling them.
+This is where our internal biases and the very expertise that I espouse we develop in ourselves in the first point, can get in our own way. The very expertise we develop within ourselves may give us a false sense of confidence in our initial interpretation of data. I have had a number of conversations with analysts where they observed a data point which did not fully conform to their expectation of how a protocol/process _should_ work. Sometimes they got so far deep in the rabbit hole trying to defend their expectations of how things should work, that they lose sight of what the data points are actually telling them.
 
 One great way that I have found to check a conclusion that I come to is to ask myself the question, _"What data, if presented, would render my hypothesis incorrect?"_ For example, let's look at the SSH netflow example above; what if we determine that the SSH service isn't running on *159.93.12.79:22*, but it is actually HTTP? That would negate every other follow-on conclusion we made based off of that data point and we would have to develop new conclusions. Then, what if we said *159.93.12.79* wasn't acting as a server at all, but *103.148.117.12* was hosting a service on TCP port 22126? That would again change our entire interpretation of the data point and force us to come to new conclusions. But if we don't actively look for data points that can disprove our theories, it can far more difficult to identify instances where our analysis is incorrect.
 
-While this is just a single example of identifying biases in our thinking and analysis, there are many more that may arise that are covered in other writings, such as *the Psychology of Intelligence Analysis* noted in the beginning.  Some of the most successful analysts that I have observed have been able to take data points that did not conform to their preconceived notions, identify where it diverged from their expectations, research the other data points that contextualized why the divergence happened, and then reincorporated this new information into their experience/expectations going forward.
+While this is just a single example of identifying biases in our thinking and analysis, there are many more that may arise that are covered in other writings, such as *the Psychology of Intelligence Analysis* noted in the beginning. **Some of the most successful analysts that I have observed have been able to take data points that did not conform to their preconceived notions, identify where it diverged from their expectations, research the other data points that contextualized why the divergence happened, and then reincorporated this new information into their experience/expectations going forward.**
 
 ## TL;DR at the End
 
