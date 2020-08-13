@@ -23,19 +23,23 @@ In order to have a meaningful discussion of how to get better at analysis, we ne
 
  While this may sound like a simple definition, I believe there are multiple aspects of it to unpack in how that applies to the act of 'analysis' in the InfoSec world. In my mind, a few of those aspects are:
 
-    * Our level of expertise in the data we are observing
-    * Our ability to synthesize inferences from multiple data points together
-    * Our ability to understand logical chains that lead to our data point
-    * Our imagination to account for unintended results (or "be prepared to be wrong")
+>
+>    * Our level of expertise in the data we are observing
+>    * Our ability to synthesize inferences from multiple data points together
+>    * Our ability to understand logical chains that lead to our data point
+>    * Our imagination to account for unintended results (or "be prepared to be wrong")
+>
 
 ## Data Expertise
 
 Our ability to 'analyze' data can be directly correlated to our level of understanding of that data. For example, let's say you walked up to my desk and handed me a magazine written in Hindi and asked me to tell you what it says. Depending on my level of understanding of Hindi, I may have any of the following results for you:
 
-    1. If I don't know Hindi at all, I may say, "Sorry, I got nothing for you".
-    2. If I have the most basic understanding of the language, I may know enough to look up each word in the dictionary and give you a very rough translation in broken English.
-    3. If I have a well versed understanding of the language, I may be able to give you a translation in coherent English.
-    4. If I have an expert level understanding of the language, I may be able to not only give you a proper English translation, but also provide insights such as, even though they said "A", that is actually a Hindi saying that actually means "B".
+>
+>    1. If I don't know Hindi at all, I may say, "Sorry, I got nothing for you".
+>    2. If I have the most basic understanding of the language, I may know enough to look up each word in the dictionary and give you a very rough translation in broken English.
+>    3. If I have a well versed understanding of the language, I may be able to give you a translation in coherent English.
+>    4. If I have an expert level understanding of the language, I may be able to not only give you a proper English translation, but also provide insights such as, even though they said "A", that is actually a Hindi saying that actually means "B".
+>
 
 Given this example, it becomes more obvious how our ability to infer data grows as our expertise/understanding of the data in question grows.
 
@@ -103,7 +107,7 @@ Given an understanding of the protocol at play in the above data point, you can 
 
 Sometimes technology doesn't work the way we think it should.  For example, one time I was looking at building detections based on [Windows logon types](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4624) and RDP.  I figured there were some kinds of accounts we'd expect to see for interactive logons (hands on keyboard, type 2), some network logons (type 3), and some remoteinteractive (rdp, type 10).  To my surprise, when I was doing testing, I realized that the way RDP was implemented at the time, a single RDP session created a type 2, type 3, *and* type 10 logon event. This took me by surprise and I had to completely alter the way that I intended to start building detections and alerts.
 
-This is where our internal biases and the very expertise that I espouse we develop in ourselves in the first point, can get in our own way. The very expertise we develop within ourselves may give us a false sense of confidence in our initial interpretation of data. I have had a number of conversations with analysts where they are observed a data point which did not fully conform to their expectation of how a protocol/process _should_ work. Sometimes they got so far deep in the rabbit hole trying to defend the their expectations of how things should work, that they lose sight of what the data points are actually telling them.
+This is where our internal biases and the very expertise that I espouse we develop in ourselves in the first point, can get in our own way. The very expertise we develop within ourselves may give us a false sense of confidence in our initial interpretation of data. I have had a number of conversations with analysts where they observed a data point which did not fully conform to their expectation of how a protocol/process _should_ work. Sometimes they got so far deep in the rabbit hole trying to defend the their expectations of how things should work, that they lose sight of what the data points are actually telling them.
 
 One great way that I have found to check a conclusion that I come to is to ask myself the question, _"What data, if presented, would render my hypothesis incorrect?"_ For example, let's look at the SSH netflow example above; what if we determine that the SSH service isn't running on *159.93.12.79:22*, but it is actually HTTP? That would negate every other follow-on conclusion we made based off of that data point and we would have to develop new conclusions. Then, what if we said *159.93.12.79* wasn't acting as a server at all, but *103.148.117.12* was hosting a service on TCP port 22126? That would again change our entire interpretation of the data point and force us to come to new conclusions. But if we don't actively look for data points that can disprove our theories, it can far more difficult to identify instances where our analysis is incorrect.
 
