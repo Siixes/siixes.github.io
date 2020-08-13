@@ -63,9 +63,9 @@ Adding these data points can completely change the context of the scenario and h
 
 This one is slightly tied to the previous two. Sometimes you can observe a data point that allows you to infer other data points, even though you may not be able to observe them. This is recognizing that your data point of interest didn't happen in a vaccuum and requires certain circumstances to get to the point that it got to (even though you may not have access to other data points to back that up). Below are a couple examples for this:
 
-~~~~
-You observe a computer on your network making a network connection to 'downloadingmalware.com' (or whatever example malicious domain you want to use here)
-~~~~
+>
+>You observe a computer on your network making a network connection to 'downloadingmalware.com' (or whatever example malicious domain you want to use here)
+>
 
 There are multiple other data points you can infer from this:
 
@@ -87,10 +87,10 @@ Looking at that, you can take a single data point and identify a number of other
 
 Below is another example of this from a slightly different perspective. Caveat: I MADE UP THE BELOW DATA FOR THE SAKE OF ILLUSTRATION, IT IS NOT REAL. Let's say all you have to evaluate is a single line of netflow data:
 
-~~~~
-Date flow start          Proto   Src IP Addr:Port      Dst IP Addr:Port        Packets    Bytes
-2010-09-01 17:29:00.459     TCP     159.93.12.79:22   ->  103.148.117.12:22126        1    61488  
-~~~~
+>
+>Date flow start          Proto   Src IP Addr:Port      Dst IP Addr:Port        Packets    Bytes
+>2010-09-01 17:29:00.459     TCP     159.93.12.79:22   ->  103.148.117.12:22126        1    61488  
+>
 
 There are multiple ways people could interpret that data. Some reactions could be, _"that is just a single packet and not a whole session, so it doesn't tell us much"_, or _"That is SSH because of port 22, so it is encrypted so we don't have any idea what's going on"_
 . But you could also infer some of the following data:
@@ -123,10 +123,12 @@ While this is just a single example of identifying biases in our thinking and an
 
 It is odd that analysis has been largely undiscussed and undefined from an industry perspective, despite being such an integral skill in many positions. If we don't actually understand what it is, how can we get better at it? Analysis could be defined as "the observation of a data point, and making an inference from that observation." One's strength and ability to do that can be deepened by some of the following skills:
 
-    * Our level of expertise in the data we are observing - If you are analyzing network data, learn networking as well as you can. If you are analyzing processes, learn OS's the best you can. etc.
-    * Our ability to synthesize inferences from multiple data points together - How often do you look for alternate data points that are related to what you are looking at to build a more complete picture of what is going on?
-    * Our ability to understand logical chains that lead to our data point - Data points almost never happen in complete isolation. What other factors must exist (whether you have the data points to support them or not) for your initial data point to exist?
-    * Our imagination to account for unintended results - Sometimes technology (and the world), do not work as we think it should. When you come across data that breaks your expectations, how able are you to incorporate other data points to compensate for that and adjust your expectations? Are you flexible enough to adjust your expectations of reality at all?
-    * Sometimes we are wrong and our expertise can trick us into consistently assuming we are right. What are you doing to identify when this happens?
+>
+>    * Our level of expertise in the data we are observing - If you are analyzing network data, learn networking as well as you can. If you are analyzing processes, learn OS's the best you can. etc.
+>    * Our ability to synthesize inferences from multiple data points together - How often do you look for alternate data points that are related to what you are looking at to build a more complete picture of what is going on?
+>    * Our ability to understand logical chains that lead to our data point - Data points almost never happen in complete isolation. What other factors must exist (whether you have the data points to support them or not) for your initial data point to exist?
+>    * Our imagination to account for unintended results - Sometimes technology (and the world), do not work as we think it should. When you come across data that breaks your expectations, how able are you to incorporate other data points to compensate for that and adjust your expectations? Are you flexible enough to adjust your expectations of reality at all?
+>    * Sometimes we are wrong and our expertise can trick us into consistently assuming we are right. What are you doing to identify when this happens?
+>
 
 Hopefully this is useful for anyone. Feel free to hit me up with any feedback (positive or negative), questions, or comments. Hopefully more to come soon. Peace out fam!
