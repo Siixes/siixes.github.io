@@ -128,7 +128,7 @@ It is odd that analysis has been largely undiscussed and undefined from an indus
 >    * Our level of expertise in the data we are observing - If you are analyzing network data, learn networking as well as you can. If you are analyzing processes, learn operating system internals the best you can. etc.
 >    * Our ability to synthesize inferences from multiple data points together - How often do you look for alternate data points that are related to what you are looking at to build a more complete picture of what is going on?
 >    * Our ability to understand logical chains that lead to our data point - Data points almost never happen in complete isolation. What other factors must exist (whether you have the data points to support them or not) for your initial data point to exist?
->    * Our imagination to account for unintended results - Sometimes technology (and the world), do not work as we think it should. When you come across data that breaks your expectations, how able are you to incorporate other data points to compensate for that and adjust your expectations? Are you flexible enough to adjust your expectations of reality at all?
+>    * Our imagination to account for unintended results - Sometimes technology (and the world) does not work as we think it should. When you come across data that breaks your expectations, how able are you to incorporate other data points to compensate for that and adjust your expectations? Are you flexible enough to adjust your expectations of reality at all?
 >    * Sometimes we are wrong and our expertise can trick us into consistently assuming we are right. What are you doing to identify when this happens?
 >
 
