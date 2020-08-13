@@ -75,7 +75,7 @@ There are multiple other data points you can infer from this:
 >    2. That process was not started in a vaccuum, it was started by something...potentially this was started
 >    automatically by other software, or perhaps it was started manually by a human.
 >    3. There is a fair chance that there is a binary file (like a MZ executable on a Windows system) on
->    the computer assocated with the process that made this network connection.
+>    the computer associated with the process that made this network connection.
 >    4. The computer had to be able to resolve the domain 'downloadingmalware.com'. Are you logging DNS, and
 >    did it make a DNS lookup for that domain? If there is evidence that a DNS lookup did **not** happen, that
 >    could imply the domain could have been added to the computers hosts file. Is there evidence of that?
