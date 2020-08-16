@@ -59,7 +59,7 @@ Mixed in with all of this, we may also have a pentester or red teamer that is al
 
 ## An example as concrete as silly putty
 
-Let's say you're a SOC analyst. Now, maybe I have just been unlucky in the many analysts that I have known, but there have been quite a few that view their job as clicking through tickets. However, if we were to slightly switch the context, we could reframe that as:
+Let's say you're a SOC analyst. It is not abnormal for many SOC analysts to view their job as clicking through tickets. However, if we were to slightly switch the context, we could reframe that as:
 
 >  my role is to evaluate data points to determine risks to our company and react appropriately
 
