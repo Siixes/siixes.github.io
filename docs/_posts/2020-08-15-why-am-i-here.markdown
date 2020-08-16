@@ -93,7 +93,7 @@ As an InfoSec professional, maybe half of the problems you'll have to solve are 
 
 Yup, I took what this post was supposed to be about, got distracted on a diatribe, and took you all into left field with me.  But even after ~pretending to~ proofread this, I feel like this is important enough of a point to diverge from what I really wanted to tell you. Many times, the reason that the business doesn't give you buy-in on logging that one thing, or getting telemetry on that data is because they haven't been given a good enough reason to.
 
-*"B/c ScUriTy!"* will very rarely work, yet that seems to be the tone of a number of justifications that I've seen/heard in the past.  Remember, the business exists to make money, and more than likely they aren't making money by selling your work in security (i'm handwaving infosec consulting firms atm, even though their own internal security teams count as sunk cost).
+*"B/c ScUriTy!"* will very rarely work, yet that seems to be the tone of a number of justifications that I've seen/heard in the past.  Remember, the business exists to make money, and more than likely they aren't making money by selling your work in security (i'm handwaving infosec consulting firms atm, even though their own internal security teams count as sunk cost (assuming they have their own internal security team...)).
 
 If you frame the conversation in the light of helping the business continuing to make money, that can drastically increase the chances of success. An example of this could be something like:
 
