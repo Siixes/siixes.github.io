@@ -72,7 +72,7 @@ What would something like that really look like? Let's say you get an alert (may
   * What assumptions are you making about this alert? (this is a huge one with many sub-topics and will probably be the subject of another post)
   * What possible explanations are there for this alert firing? How can you test those explanations?
 
-By being able to answer questions like this you will be able to better assess the actual risk and optimal outcomes of that alert. For example, you may be able to identify this alert is a false positive and prevent some poor user from having their machine isolated/re-imaged/etc. You may investigate this alert and identify a chain of legitimately malicious activity. Or, you may dig into the alert and identify the fact that there is another set of data that you'd need to fully determine how legitimate it is; which would be a fantastic use case to raise with the business/${other teams} about getting this data going forward.
+By being able to answer questions like these you will be able to better assess the actual risk and optimal outcomes of that alert. For example, you may be able to identify this alert is a false positive and prevent some poor user from having their machine isolated/re-imaged/etc. You may investigate this alert and identify a chain of legitimately malicious activity. Or, you may dig into the alert and identify the fact that there is another set of data that you'd need to fully determine how legitimate it is; which would be a fantastic use case to raise with the business/${other teams} about getting this data going forward.
 
 ### ...and now for a diatribe...
 
