@@ -63,7 +63,7 @@ Let's say you're a SOC analyst. It is not abnormal for many SOC analysts to view
 
 >  my role is to evaluate data points to determine risks to our company and react appropriately
 
-What would something like that really look like? Let's say you get an alert somehow (maybe it's an anti-virus alert, maybe it's some behavioral detection, whatever...), your goal is to analyze how accurate that is. When you see that, below are some questions you can start asking:
+What would something like that really look like? Let's say you get an alert (maybe it's an anti-virus alert, maybe it's some behavioral detection, whatever...), your goal is to analyze how accurate that is. When you see that, below are some questions you can start asking:
 
   * How accurate is the detection that lead to this alert?
   * Do you know the logic behind this alert?
