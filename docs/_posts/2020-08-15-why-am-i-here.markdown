@@ -17,9 +17,7 @@ Strap in your cliche seatbelt and get ready to bear with me here.  I think that 
 
 ## Answering the question
 
-Here's the trap I see many InfoSec professionals sink into in how their view their roles:
-
-![you know what i mean](analysis.jpg)
+Here's the trap I see many InfoSec professionals sink into...it's like the scene from the Office Space when the Bobs are asking Glen, *"What would you say you do here?"*  Then the security guy says, *"I take the alert from ${tool A} and I close it in ${tool B}!"*
 
 "Why am I here....like, really?"
 
