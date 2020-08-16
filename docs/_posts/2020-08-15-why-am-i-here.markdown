@@ -19,7 +19,7 @@ Strap in your cliche seatbelt and get ready to bear with me here.  I think that 
 
 Here's the trap I see many InfoSec professionals sink into in how their view their roles:
 
-![you know what i mean](https://imgflip.com/i/4bliym)
+![you know what i mean](../analysis.jpg)
 
 "Why am I here....like, really?"
 
