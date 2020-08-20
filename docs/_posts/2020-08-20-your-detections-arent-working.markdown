@@ -75,7 +75,7 @@ What are your real goals from doing something like this? There are a couple of t
 >    2. Provide a feedback loop to improve detections that don't work very well/are too niche. Let's say you have a detection for Mimikatz, and that detection is looking for any process run from **C:\Windows\Syystem32\Mimikatz.exe**. *"Awesome, now I can sleep well knowing that we'll detect Mimikatz in our network..."*, you may be thinking to yourself.  One question you should **always** be asking yourself is, **"Under what circumstances would an attacker do this thing, but my detection not catch it?"** For this example, what if the attacker runs Mimikatz from a temp or downloads folder? What if "Mimikatz.exe" is renamed to "Mimidogz.exe"? Or "update.exe"? Attackers can be crafty, and just renaming an attack tool happens relatively frequently. If you slightly alter one of these attacks on your test box, would your detection still work?
 >    3. You may find yourself in a situation where you are running certain attacks on your test box and realize that you don't even have the right logs to be able to identify the activity/build detections off of. This is a fantastic and concrete data point that you can raise with business stakeholders to try to get buy-in for that kind of visibility!
 >    4. It's not always feasible to build detections for all permutations of how an attacker may manifest themselves in your environment. But over time you will create better detections and you will have to get far more creative to pull off attacks in a way to evade them. That will have raised the bar high enough that attackers will have to expend more and more effort to do the same attacks, which is part of the point of all of this.
->s
+>
 
 ### Outtro
 
