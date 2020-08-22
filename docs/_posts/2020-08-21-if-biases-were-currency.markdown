@@ -53,7 +53,7 @@ After consulting with far wiser people in my IT department, it turns out that th
 
 There were multiple times throughout this process that I could have (in semi-good-conscious) ruined Sally's day. She pops up as a culprit for account brute forcing, and there were a number of times that I was about to kill vpn/lock out account/etc until I figured out what malware was running on her machine. Not having all of the information made it exceptionally easy for me to jump that conclusion. It doesn't help that the alert that I was responding to, account brute forcing, colored how I was interpreting the situation. (Side note: this is why it is so important to do everything you can to understand the logic behind the alerts you investigate, so you are familiar with where they might fail, as described in my blog [here](https://criminal.group/infosec/2020/08/20/your-detections-arent-working.html) )
 
-I have seen/heard of a number of times when the SOC takes nuclear measures before they have all of the data. I have also seen analysts that look at data and initially come to a conclusion about what is going on, and *no matter what* new information is presented to them that contradicts their conclusion, they never give it up.
+I have seen/heard of a number of times when the SOC takes nuclear measures before they have all of the data. I have also seen analysts that look at data and initially come to a conclusion about what is going on, and *no matter what new information is presented to them that contradicts their conclusion*, they never give it up.
 
 Do not let this happen to you. Learn to recognize the biases you start investigations with, because if you can't even recognize them, how will you ever know when they take you down the wrong path?
 
