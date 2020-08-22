@@ -15,7 +15,7 @@ Why am I talking about this? Because I am very interested in analysis, and as po
 
 For example, in [The Psychology of Intelligence Analysis](https://www.cia.gov/library/center-for-the-study-of-intelligence/csi-publications/books-and-monographs/psychology-of-intelligence-analysis/PsychofIntelNew.pdf) they discuss a fascinating study. The gist is this, someone is shown only a small portion of a picture, and they need to guess what the picture is of. Slowly, the picture is completely revealed. As the picture becomes slowly more revealed, the subject has to keep guessing what it is of. The result was pretty fascinating:
 
-> The earlier someone had to form an opinion of what the picture was, the longer it took and the more concrete data was required for them to change their mind. The longer someone took before they had to form an opinion on it, the easier it was for them to change their minds based on the increasing amount of data presented to them.
+> The earlier someone had to form an opinion of what the picture was, the longer it took and the more concrete data was required for them to change their mind. The longer someone waited before they had to form an opinion on it, the easier it was for them to change their minds based on the increasing amount of data presented to them.
 
 Why does this matter to us? Well, if we don't recognize the biases that we have towards the data we work with and how to counter them, it can make our jobs/lives **a lot** harder.
 
