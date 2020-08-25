@@ -7,7 +7,7 @@ categories: infosec
 
 ### Non-Original Intro
 
-There are a couple different ways that people can work with detections. This is kinda a follow-on article to my other [post on detections](https://criminal.group/infosec/2020/08/20/your-detections-arent-working.html). There are different ways that you can build and use detections, but it's important to be cognizant of what they are and when to use them.
+There are a couple different ways that people can work with detections. This is a follow-on article to my other [post on detections](https://criminal.group/infosec/2020/08/20/your-detections-arent-working.html). There are different ways that you can build and use detections, but it's important to be cognizant of what they are and when to use them.
 
 > Detections are like tools in your work shop, there are different kinds, and some are more appropriate for certain jobs than others.
 
@@ -48,18 +48,19 @@ Let's look at an example that has worked before. But before looking at the examp
 Cool, so we have a bunch of detections looking for attackers getting into our network (IDS/AV/phishing/etc), but if they somehow get past all of that, it may be reasonable to assume they will perform some sort of reconnaissance (obligatory shout-out to [Mitre ATT&CK Framework](https://attack.mitre.org/) ). What would that recon look like? Well, maybe some of the commands could be:
 
 >
-> whoami
-> id
-> ipconfig / ifconfig
-> netstat
-> ping
-> net user
-> tasklist
-> systeminfo
+> * whoami
+> * id
+> * ipconfig / ifconfig
+> * netstat
+> * ping
+> * net user
+> * tasklist
+> * systeminfo
+> * cmdkey /list
 > etc.
 >
 
-Cool, here's the problem. If you just create alerts for the execution of those commands, you and your analysts will wish for the sweet consequence of committing seppuku multiple times a day. It will be healthy for no one. However, if you were to take the culmination of all of these events, the chance that your EDR product would see a single user running 3+ of these commands in a short timeframe is *(probably)* exceptionally low. This could be a fantastic method of catching those squirrelly actors that seem to find an imaginative way to get into your network. (Quick anecdote, a long time ago in a former life I was looking at some data where a threat actor was able to hack supply chain to get access to a target's network. Honestly, good luck catching initial access via supply chain, but once the actor got on the network, they ran a handful of recon commands to see where the landed, and it was exactly an analytic like this that initially caught them.)
+Cool, here's the problem. If you just create alerts for the execution of those commands, you and your analysts will wish for the sweet consequence of committing seppuku multiple times a day. It will be healthy for no one. However, if you were to take the culmination of all of these events, the chance that your EDR product would see a single user running 3+ of these commands in a short timeframe is *(probably)* exceptionally low. This could be a fantastic method of catching those squirrelly actors that seem to find an imaginative way to get into your network. *(Quick anecdote, a long time ago in a former life I was looking at some data where a threat actor was able to hack supply chain to get access to a target's network. Honestly, good luck catching initial access via supply chain, but once the actor got on the network, they ran a handful of recon commands to see where the landed, and it was exactly an analytic like this that initially caught them.)*
 
 
 ### Caveats
@@ -79,4 +80,4 @@ While they are both aimed at identifying attackers as soon as possible, they app
 
 The ideology of not catching every single hacker on keyboard should never stop you from making progress where you can. Go forth and raise the bar one notch higher every time you can, because it's the culmination of all of these little steps in defense that will make your organization an absolute pain in the ass for an attacker to get in and stay in.
 
-<3 you all. Please feel free to shoot me any feedback/comments/questions/concerns/etc. 
+<3 you all. Please feel free to shoot me any feedback/comments/questions/concerns/etc.
