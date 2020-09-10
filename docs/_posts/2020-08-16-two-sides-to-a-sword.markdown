@@ -5,7 +5,7 @@ date:   2020-08-16 00:49:16 -0700
 categories: infosec
 ---
 
-<img src="/images/sharpen.jfif" alt="Obligatory blade sharpening image">
+<img src="www.criminal.group/images/sharpen.jfif" alt="Obligatory blade sharpening image">
 
 If you look at the make-up of a blade, it consists of a piece of metal where two opposing sides of it are carefully filed to specific angles to create an edge at a specific degree. If the two sides of the metal are grinded/filed at specific degrees, they meet in the middle and can create an exceptionally sharp edge.
 
