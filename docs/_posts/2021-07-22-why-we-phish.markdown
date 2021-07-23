@@ -26,8 +26,11 @@ I don't believe this needs to remain the case. I believe that we, as an industry
 The way that many companies attempt to solve this problem traditionally contains some mix of the below items:
 
 >    * As employees are onboarded, part of their onboarding may include a phishing awareness training
+
 >    * Employees are required to periodically (like annually?) complete their phishing awareness training
+
 >    * InfoSec teams or security consultants are brought in to phish the workforce, identifying who would still fall for phishing attempts from real attackers
+
 >    * Those employees might be disciplined, put on a watch list, put back in a queue for more phishing campaigns, or required to take more rounds of phishing awareness training
 
 We do such things, people continue to click on links, then we sit back and say, _"see, these people never learn, they keep clicking on links in phishing emails..."_
@@ -67,7 +70,9 @@ Given the fact that we are seeking behavioral changes, what if we target our phi
 What if we created our phishing campaigns in such a way that, when a user clicks on a link they are taken to a page that immediately notifies them that they got caught by a phishing campaign. But not only that, the page contains easily digestable information for *how* they were caught by that phishing campaign. This would include things like *screen shots taken directly from the phishing email they just clicked on and probably still have open in a tab* that highlight things like:
 
 >  "Here's a screenshot of someone's name you probably know, but coming from an email address that TOTALLY doesn't match."
+
 >  "Here's a screenshot of a link that looks fine, but when you mouse over it, you can see it's gonna take you somewhere totally different."
+
 >  etc.
 
 Here are a couple reasons why I feel like this approach is so critically important:
