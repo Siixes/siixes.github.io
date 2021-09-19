@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Thats so offensive!"
-date:   2020-08-15 21:41:16 -0700
+date:   2021-09-18 21:41:16 -0700
 categories: offensive
 ---
 
