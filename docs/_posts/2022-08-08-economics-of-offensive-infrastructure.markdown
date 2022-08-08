@@ -41,6 +41,6 @@ I really love the phrase "the best way to rob a bank is to own one", because I f
 
 There is definitely more that _could_ be said about this, but it was such an interesting use case I had to write something about it touching on the subject.  Many people doing "illegal hacking" on the Internet are not on the cutting edge of Opsec, and don't have the expertise, time, resources, or wherewithal to run their own operations on their own infrastructure in a secure way, which leaves so many opportunities like the above for taking advantage of.
 
-Where ever you are, I hope you are well!  
+Where ever you are, I hope you are well! 
 
 (as an aside, I'm going to be at DefCon this week, feel free to hit me up on Twitter or [LinkedIn](https://www.linkedin.com/in/kylebelitz/). I'm always happy to say hi and meet new people)
