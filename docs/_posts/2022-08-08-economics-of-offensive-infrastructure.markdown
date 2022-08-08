@@ -3,7 +3,7 @@ layout: post
 title:  "Economics of Attacker Infrastructure"
 date:   2022-08-08 21:41:16 -0700
 categories: offensive
---
+---
 
 It's been a while since I wrote a blog, but something sparked my noodle a few weeks ago and this has been burning a hole in my head since then. Actually, there are a couple of thoughts I'm interested in that are only tangentially related.  But here we go!
 
