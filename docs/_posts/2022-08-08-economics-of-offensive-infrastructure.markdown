@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Economics of Attacker Infrastructure"
-date:   2022-08-08 21:41:16 -0700
+date:   2022-08-08 01:41:16 -0700
 categories: offensive
 ---
 
