@@ -15,7 +15,7 @@ Is a bored teenager with an Internet connection able to look up how to do some p
 
 ## Background (the Great Seconding)
 
-One of my friends was digging into some malware and was telling me about it. One part of the attack chain was convincing people to download and run a file. This attack in particular happened to use [transfer.sh](transfer.sh) for the file upload/hosting/download functionality. Then, of course, they'd use a url shortener to point to the file itself, and send around that shortened link trying to get people to download/run it. 
+One of my friends was digging into some malware and was telling me about it. One part of the attack chain was convincing people to download and run a file. This attack in particular happened to use [https://transfer.sh](https://transfer.sh) for the file upload/hosting/download functionality. Then, of course, they'd use a url shortener to point to the file itself, and send around that shortened link trying to get people to download/run it. 
 
 I just thought this was one of the most fascinating behaviors and made me wish I made and was running transfer.sh. 
 
